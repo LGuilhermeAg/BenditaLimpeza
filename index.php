@@ -620,7 +620,7 @@ class="w3-button">Open Modal</button>
 
 
 
-<div style="background-color: #f0f0f0;">
+<div class="pre-footer">
     <h2 class="w3-center">Nos Acompanhe!</h2>
     <div class="w3-center">
       <br>
@@ -628,19 +628,22 @@ class="w3-button">Open Modal</button>
       <a class="w3-button" href="https://instagram.com/apurolimpeza" target="_blank" style="border-bottom: 2px solid violet;">Instagram</a>
       <br><br>
       </div>
-    <br>
+    <!-- <div class="waveSpacer layer2"></div> -->
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-theme-dark w3-padding-16" style="background-image: linear-gradient(to top right, var(--azulEscuro), var(--azulClaro));color: black !important;">
-    <center><h3>Bendita Limpeza</h3></center>
-  <center><p>A Escolha de Quem Entende de Limpeza.<a href="https://www.w3schools.com/w3css/default.asp" target="_blank"></a></p></center>
-  <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
-    
-    <a class="w3-text-white" href="#section1"><span class="w3-xlarge">
-    <i class="fa fa-chevron-circle-up"></i></span></a>
-  </div>
-  <center><a href="w3css_references.asp" class="w3-btn w3-theme-light" target="_blank" style="margin-right: -2.25%">Faça um Pedido Agora</a></center>
+<footer class="w3-container w3-theme-dark w3-padding-16" style="background-image: linear-gradient(to top right, var(--azul3), var(--azulClaro));color: black !important;">
+    <div class="waveSpacer layer2"></div>
+    <div class="footer-container">
+        <center><h3>Bendita Limpeza</h3></center>
+        <center><p>A Escolha de Quem Entende de Limpeza.<a href="https://www.w3schools.com/w3css/default.asp" target="_blank"></a></p></center>
+        <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+
+        <a class="w3-text-white" href="#section1"><span class="w3-xlarge">
+        <i class="fa fa-chevron-circle-up"></i></span></a>
+        </div>
+        <center><a href="w3css_references.asp" class="w3-btn w3-theme-light" target="_blank" style="margin-right: -2.25%">Faça um Pedido Agora</a></center>
+    </div>
 </footer>
 
 
