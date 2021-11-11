@@ -95,11 +95,12 @@ body::-webkit-scrollbar-thumb{
 }
 
 #header li:hover{
-	transition: .3s;
+	transition: .15s;
 	padding-bottom: 5px;
 	margin-top: 4px;
 	color: var(--azulEscuro);
 	border-bottom: 2px solid var(--azulClaro);
+	background-color: whitesmoke;
 
 }
 
@@ -113,12 +114,20 @@ body::-webkit-scrollbar-thumb{
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	background-color: rgba(250,250,250,.8);
+	/*background-color: rgba(250,250,250,.8);*/
 	width: 100vw;
 	height: 70px;
 	z-index: 1;
 	top: 0;
-	transition: .75s;
+	transition: .5s;
+	box-shadow: inset -0px -0px 5px 0px white;
+	box-shadow: -0px -0px 5px 0px white;
+}
+
+.navWhite{
+	background-color: rgba(255,255,255,.9);
+	/*border-bottom: 2px solid var(--azulClaro);*/
+	box-shadow: inset -5px -2px 0px 0px var(--azulClaro);
 }
 
 .nav1{
@@ -272,11 +281,12 @@ body{
 	opacity: 100%;
 	z-index: 10;
 	right: 0;
-	top: 20%;
+	top: 25%;
 	width: 20%;
 	text-shadow: 5px 5px 80px rgba(0,0,0,.75);
-	line-height: normal;
+	line-height: 1.25;
 	text-transform: uppercase;
+	transform: translateY(var(--translateAfter));
 }
 
 /*#section1::after{
@@ -304,7 +314,7 @@ body{
 	opacity: 100%;
 	opacity: 100%;
 	bottom: -10%;
-	z-index: 10;
+	z-index: 11;
 }
 
 .layer1{
@@ -696,6 +706,33 @@ footer{
 	position: relative;
 	height: 40vh;
 	z-index: -2;
+	position: relative;
+}
+
+footer::before{
+	content: '';
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	background-color: var(--azulClaro);
+	z-index: 15;
+	left: 100px;
+	top: -85%;
+	background-image: url('../img/bendita-B.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	/*background-blend-mode: */
+	/*screen */
+	/*color-burn*/
+	/*overlay*/
+	/*luminosity*/
+	/*hard-light*/
+	/*soft-light*/
+	/*multiply*/
+	/*;*/
+	opacity: 1;
+	box-shadow: 10px -10px 40px 0px white;
 }
 
 svg{

@@ -21,14 +21,70 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script defer>
-        window.onload = function() {stickyNav()};
-        window.onscroll = function() {stickyNav()};
+        //parallax
 
-        var header = document.getElementById("header");
-        var nav = document.getElementById("Nav");
-        var logo = document.getElementById("Logo");
-        var sec2 = document.getElementById("section2");
-        var sticky = header.offsetTop;
+        $(document).ready(function () {
+            // let section1 = document.querySelector('#section1');
+            // let blBefore = window.getComputedStyle(section1, '::after');
+            // blBefore.style.color = 'black';
+            const s1 = document.querySelector('#section1');
+
+            $(window).on('load scroll', function () {
+              var scrolled = $(this).scrollTop();
+              s1.style.setProperty('--translateAfter',scrolled*0.4+'px');
+              $('#section1').css({
+                  'transform': 'translateY('+scrolled*0.5+'px)', // parallax (50% scroll rate)
+                  'opacity': 1 - scrolled / 1000 // fade out at 400px from top
+              });
+              $('#spacer').css({
+                  'transform': 'translateY(-'+scrolled*0.5+'px)', // parallax (50% scroll rate)
+                  'opacity': 1 - scrolled / 1000 // fade out at 400px from top
+              });
+              // $('#section2').css({
+              //     'transform': 'translate3d(0, ' + -(scrolled * -0.4) + 'px, 0)', // parallax (50% scroll rate)
+              //     'opacity': 1 - scrolled / 400 // fade out at 400px from top
+              // });
+              // $('#section1').css({
+              //     'transform': 'translate3d(0, ' + -(scrolled * -0.75) + 'px, 0)', // parallax (50% scroll rate)
+              //     'opacity': 1 - scrolled / 700 // fade out at 400px from top
+              // });; // parallax (25% scroll rate)
+            });
+        })
+        //--parallax
+        // window.onload = function() {stickyNav()};
+        // window.onload = function() {navWhite()};
+        // window.onscroll = function() {stickyNav()};
+        // window.onscroll = function() {navWhite()};
+        //sticky nav variables
+        // var header = document.getElementById("header");
+        // var nav = document.getElementById("Nav");
+        // var logo = document.getElementById("Logo");
+        // var sec2 = document.getElementById("section2");
+        // var sticky = header.offsetTop;
+
+        //turn white nav variables
+        //v1 funciona:
+        window.addEventListener('scroll', function(){
+            let header = document.getElementById("header");
+            header.classList.toggle('navWhite', window.scrollY > 0);
+        })
+        //v2, kevin powell:
+        // const header = document.querySelector("header");
+        // const sec1 = document.querySelector("#section1");
+        // const sec1Options={};
+        // const navObserver = new IntersectionObserver(function(entries, navObserver){
+        //         entries.forEach(entry => {
+        //             console.log(entry.target);
+        //             // if(!entry.isIntersecting){
+        //             //     header.classList.remove("navWhite");
+        //             // }else{
+        //             //     header.classList.add("navWhite");
+        //             // }
+        //         })
+        // }, sec1Options);
+
+        // navObserver.observe(sec1);
+        //--//v2//--
 
         function stickyNav() {
           //if (window.pageYOffset > sticky) {
@@ -74,16 +130,16 @@ class="w3-button">Open Modal</button>
 
 
     -->
-    <div class="navbar1" id="header" style="z-index:12">
+    <header class="navbar1" id="header" style="z-index:12">
         <a class="logo1" href="#" id="Logo">Bendita Limpeza</a>
         <ul class="nav1" id="Nav">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#section1">Home</a></li>
             <li><a href="#section2">About</a></li>
             <li><a href="#section4">Portfolio</a></li>
             <li><a href="#section3">Service</a></li>
             <li><a href="#contact" onclick="document.getElementById('id01').style.display='block'">Contact</a></li>
         </ul>
-    </div>
+    </header>
      <!-- <div class="navbar" id="header">
         <a class="logo" href="#" id="Logo">Bendita Limpeza</a>
         <ul class="nav" id="Nav">
@@ -174,7 +230,7 @@ class="w3-button">Open Modal</button>
                 <h1 style="font-weight: bolder;color: white;font-size: 5em;margin-right: 20%;">Bendita<br>Limpeza</h1>
             </div>
         </div> -->
-        <div class="waveSpacer layer1"></div>
+        <div class="waveSpacer layer1" id="spacer"></div>
     </section>
 
     <section id="section2">
@@ -639,10 +695,10 @@ class="w3-button">Open Modal</button>
         <center><p>A Escolha de Quem Entende de Limpeza.<a href="https://www.w3schools.com/w3css/default.asp" target="_blank"></a></p></center>
         <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
 
-        <a class="w3-text-white" href="#section1"><span class="w3-xlarge">
+        <a class="w3-text-white" href="#section1" style="z-index:101"><span class="w3-xlarge">
         <i class="fa fa-chevron-circle-up"></i></span></a>
         </div>
-        <center><a href="w3css_references.asp" class="w3-btn w3-theme-light" target="_blank" style="margin-right: -2.25%">Faça um Pedido Agora</a></center>
+        <center><a href="w3css_references.asp" class="w3-btn w3-theme-light" target="_blank" style="margin-right: -2.25%;z-index:101">Faça um Pedido Agora</a></center>
     </div>
 </footer>
 
