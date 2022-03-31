@@ -62,9 +62,33 @@
             <li><a href="#section2">Valores</a></li>
             <li><a href="#section4">Perguntas Frequentes</a></li>
             <li><a href="#section3">Nos Acompanhe!</a></li>
-            <li><a href="#contact" onclick="document.getElementById('id01').style.display='block'">Contact</a></li>
+            <li><a href="#contact" onclick="document.getElementById('id01').style.display='block'">Contato</a></li>
         </ul>
     </header>
+
+    <header class="navbar2" style="z-index:12;background-color:white;">
+        <span onclick="document.getElementById('id02').style.display='block'"
+            class="w3-button w3-display-topleft" style="font-size: 3rem;">☰</span>
+        <center><a class="" href="#" id=""><img src="img/bendita-logo.jpg"></a></center>
+    </header>
+    <div id="id02" class="w3-modal" style="overflow-x: hidden; z-index: 13;">
+    <div class="w3-modal-content">
+        <div class="w3-container">
+            <span onclick="document.getElementById('id02').style.display='none'"
+            class="w3-button w3-display-topright">&times;</span>
+            <center><h2>BEM VINDO À BENDITA LIMPEZA!</h2>
+            <ul style="">
+                <!-- <li><a href="#section1">Home</a></li> -->
+                <li><a href="#sectionAbt2" onclick="document.getElementById('id02').style.display='none'">Sobre Nós</a></li>
+                <li><a href="#section2" onclick="document.getElementById('id02').style.display='none'">Valores</a></li>
+                <li><a href="#section4" onclick="document.getElementById('id02').style.display='none'">Perguntas Frequentes</a></li>
+                <li><a href="#section3" onclick="document.getElementById('id02').style.display='none'">Nos Acompanhe!</a></li>
+                <li><a href="#contact" onclick="document.getElementById('id02').style.display='none';document.getElementById('id01').style.display='block'">Contato</a></li></center>
+            </ul>
+        </div>                   
+
+    </div> 
+</div>
      
 
     
@@ -451,27 +475,33 @@
                 </div>
                 </div> -->
 
-                <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align" style="box-shadow: 0px 0 5px  lightgrey; text-align: center !important; background-color: white !important; color: black !important">Os produtos são de procedência?</button>
-                <div id="Demo1" class="w3-hide">
-                  <div class="w3-container">
-                    <p>Oferecemos produtos das melhores fábricas da industria de limpeza, pelo melhor preço!</p>
+                <button onclick="myAccFunc('Demo1')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align" style="box-shadow: 0px 0 5px  lightgrey; text-align: center !important; background-color: white !important; color: black !important">Qual a história da Bendita Limpeza?</button>
+                <div id="Demo1" class="w3-hide w3-white">
+                  <div class="w3-container" style="border-top: 1px solid whitesmoke;">
+                    <p>A Bendita Limpeza foi criada em 2020 com objetivo de atuar no mercado de João Monlevade e Região. Preocupada em proporcionar mais qualidade de vida para as pessoas, a empresa oferece serviços domésticos, empresariais, pós obras e passadoria. O intuito é fazer com que o seu público economize o seu tempo com tais serviços, e passe esse tempo com a família, com os filhos, tenha momentos de lazer, ou dedique mais tempo a sua saúde. Trazendo assim aos seus clientes mais comodidade,facilidade e segurança, suprindo a necessidade diária de um ambiente limpo e organizado.</p>
                   </div>
                 </div>
-                <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align"  style="text-align: center !important; box-shadow: 0px 0 5px  lightgrey;background-color: white !important; color: black !important">Os produtos são de fabricação própria ou revenda?</button>
-                <div id="Demo2" class="w3-hide">
-                  <a href="#" class="w3-button w3-block w3-left-align">Link 1</a>
+                <button onclick="myAccFunc('Demo2')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align"  style="text-align: center !important; box-shadow: 0px 0 5px  lightgrey;background-color: white !important; color: black !important">O que é a Bendita Limpeza?</button>
+                <div id="Demo2" class="w3-hide w3-white">
+                  <!-- <a href="#" class="w3-button w3-block w3-left-align">Link 1</a>
                   <a href="#" class="w3-button w3-block w3-left-align">Link 2</a>
-                  <a href="#" class="w3-button w3-block w3-left-align">Link 3</a>
-                </div>
-                <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align" style="text-align: center !important; box-shadow: 0px 0 5px  lightgrey;background-color: white !important; color: black !important">Em que região a Apuro Limpeza atende?</button>
-                <div id="Demo3" class="w3-hide w3-black">
-                  <div class="w3-container">
-                    <p>Accordion with Images:</p>
-                    <img src="img_snowtops.jpg" style="width:30%;" class="w3-animate-zoom">
-                    <p>French Alps</p>
+                  <a href="#" class="w3-button w3-block w3-left-align">Link 3</a> -->
+                  <div class="w3-container" style="border-top: 1px solid whitesmoke;">
+                    <p>A Bendita Limpeza é uma empresa especializada em atividades do lar, limpeza comercial, pós obra e serviços de passadoria. A empresa oferece soluções para o dia a dia das pessoas, com um serviço sob medida para atender as necessidades do cliente. Com uma equipe selecionada e qualificada para realizar as mais diversas atividades do lar e ambientes comerciais.</p>
                   </div>
                 </div>
-                <center><button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" style="background-image: linear-gradient(to bottom right, pink, violet) !important; font-weight: 100;padding: 5px 25px 5px 25px;margin-top: 50px">Ver Mais</button></center>
+                <button onclick="myAccFunc('Demo3')" class="w3-padding-16 w3-theme w3-button w3-block w3-left-align" style="text-align: center !important; box-shadow: 0px 0 5px  lightgrey;background-color: white !important; color: black !important">Que tipo de serviço é oferecido?</button>
+                <div id="Demo3" class="w3-hide w3-white">
+                  <div class="w3-container" style="border-top: 1px solid whitesmoke;">
+                    <!-- <p>Accordion with Images:</p>
+                    <img src="img_snowtops.jpg" style="width:30%;" class="w3-animate-zoom">
+                    <p>French Alps</p> -->
+                    <div class="w3-container">
+                        <p>Oferecemos um serviço personalizado, trazendo soluções de acordo com a necessidade de cada cliente, seja ele residencial ou empresarial. Com uma equipe de profissionais , treinadas e aptas para um pronto atendimento, garantindo assim qualidade e eficiência. Estamos cada dia em busca de constante evolução, atento as oportunidades para melhorar constantemente nosso trabalho. Experiencias passadas, críticas e sugestões são levadas a sério e nos faz lembrar que somos eternos aprendizes.</p>
+                      </div>
+                  </div>
+                </div>
+                <center><!-- <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" style="background-image: linear-gradient(to bottom right, pink, violet) !important; font-weight: 100;padding: 5px 25px 5px 25px;margin-top: 50px">Ver Mais</button></center> -->
 
 
 
