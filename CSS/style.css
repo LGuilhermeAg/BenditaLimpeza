@@ -335,19 +335,32 @@ body{
 }
 
 #sectionAbout{
+	background-color: white;
 	background-image: url('../img/bendita_white.jpg');
 	min-height: 60vh;
 	width: 100vw;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-blend-mode: multiply;
-	text-align: right;
+	/*text-align: right;*/
+	box-shadow: -100px 10px 100px 100px white inset;
+}
+
+#sectionAbt2{
+	background-image: linear-gradient(white,var(--azul3),var(--azul5),var(--azul3),white);
+	min-height: 60vh;
+	width: 100vw;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-blend-mode: multiply;
+	/*text-align: right;*/
+	/*box-shadow: -100px 10px 100px 100px white inset;*/
 }
 
 #section2{
 	position: relative;
 	background-color: white;
-	
+	min-height: 100vh;
 /*	box-shadow: 0 15px 25px 0 rgba(0,0,0,.5);*/
 	/*transition: .75s;*/
 }
@@ -471,6 +484,7 @@ https://www.youtube.com/watch?v=5DEq5cWNYt8
 	overflow: hidden;
 	box-shadow: 0 10px 50px 0 rgba(50,50,50,.5);
 	transition: transform 500ms ease;
+	height: auto;
 }
 
 .card-novo:hover{
@@ -484,7 +498,9 @@ https://www.youtube.com/watch?v=5DEq5cWNYt8
 }
 
 .card-novo p{
-	font-size: 1.05rem;
+	font-size: 1.8rem !important;
+	line-height: 2.75rem;
+	padding: 1rem;
 }
 
 .card-novo .cont{
@@ -506,9 +522,10 @@ https://www.youtube.com/watch?v=5DEq5cWNYt8
 }
 
 .card-novo h2{
-	font-size: 1.5rem;
+	font-size: 2rem;
 	position: relative;
 	width: max-content;
+	font-weight: bold;
 }
 
 .card-novo:hover h2{
