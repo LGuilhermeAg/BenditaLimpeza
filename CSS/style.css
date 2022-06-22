@@ -1023,7 +1023,7 @@ svg:hover{
 	z-index: 11;
 
 }
-#section2{
+#section2, footer, .wavespacer, .layer1, .layer2{
 	display: none;
 }
 }
